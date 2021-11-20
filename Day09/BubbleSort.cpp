@@ -12,17 +12,15 @@ int main(){
     cin>>array[i];
   }
   
-  int counter = 1;
 
-  while(counter<n){
-    for(int i=0; i<n-counter; i++){
-      if(array[i]>array[i+1]){
-        int temp = array[i];
-        array[i] = array[i+1];
-        array[i+1] = temp;
+  for(int i=0;i<n;i++){
+    for(int j=0; j<n-i; j++){
+      if(array[j]>array[j+1]){
+        int temp = array[j];
+        array[j] = array[j+1];
+        array[j+1] = temp;
       }
     }
-    counter++;
   }
 
   for(int i=0; i<n; i++){
